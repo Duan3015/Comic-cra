@@ -1,0 +1,100 @@
+@import "functions";
+@import "variables";
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  src: local("Montserrat"),
+    url(../fonts/Montserrat/static/Montserrat-Bold.ttf) format("opentype");
+}
+
+.card {
+  // background-color: black;
+  border-radius: 15px;
+  margin: 3% 15%;
+  max-height: rem(406px);
+  padding: 3%;
+
+  .card__loader {
+    display: flex;
+    justify-content: center;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $mobile-width) {
+      flex-direction: row;
+    }
+    .card__aside {
+      display: flex;
+      flex-direction: column;
+      .card__image {
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .card__score {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .card__header {
+      @media (min-width: $mobile-width) {
+        padding-left: rem(26px);
+      }
+      .card__title {
+        color: $primary-color;
+        font-size: 36px;
+        font-weight: bold;
+        width: 100%;
+        font-family: Montserrat;
+      }
+      .card__subtitle {
+        display: flex;
+
+        span {
+          color: $secondary-color;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Montserrat;
+
+          &:nth-child(2) {
+            margin-left: 5%;
+          }
+        }
+      }
+      .card__copy {
+        color: #1a1919;
+        font-size: 13px;
+        font-family: Montserrat;
+      }
+    }
+    .card_stars {
+      display: flex;
+    }
+  }
+  .card__footer {
+    display: flex;
+    justify-content: flex-end;
+    .card__button {
+      width: 144px;
+      height: 48px;
+      background: #1e5b88;
+      border-radius: 15px;
+      color: white;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      font-family: Montserrat;
+      border-color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}

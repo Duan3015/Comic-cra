@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "variables";
+
+@function rem($pxval) {
+  @if unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  @if unitless($base) {
+    $base: strip-units($base);
+  }
+
+  @return math.div($pxval, $base) * 1rem;
+}

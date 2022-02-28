@@ -1,8 +1,8 @@
+import "./styles/app.scss";
 import Card from "./components/card";
 
 function App() {
-
-  return (<Card></Card>);
+  return <Card></Card>;
 }
 
 export default App;
